@@ -14,12 +14,19 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //END POINT URL
+        buildConfigField "String", "BASE_URL", '"https://api.helpster.tech/v1/"'
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    androidExtensions {
+        experimental = true
     }
 }
 
@@ -28,6 +35,9 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
@@ -37,14 +47,7 @@ dependencies {
     def recyclerview_version = "1.1.0"
     def lifecycle_version = "2.1.0"
     def fan_version = "1.0.2"
-    def rounded_imageview_version = "2.3.0"
-    def android_ktx_version = "1.1.0"
     def styleable_toast_version = "2.2.3"
-    def paging_version = "2.1.0"
-
-    //pagination
-    implementation "androidx.paging:paging-runtime:$paging_version"
-    // For Kotlin use paging-runtime-ktx
 
     implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
     implementation "androidx.cardview:cardview:$cardview_version"
@@ -59,24 +62,9 @@ dependencies {
     implementation "com.amitshekhar.android:jackson-android-networking:$fan_version"
     implementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
 
-    //Rounded ImageView
-    implementation "com.makeramen:roundedimageview:$rounded_imageview_version"
-
-    //Bottom Navigation
-    implementation 'com.google.android.material:material:1.1.0-alpha10'
-
-    //Android KTX
-    implementation "androidx.core:core-ktx:$android_ktx_version"
-    implementation "androidx.fragment:fragment-ktx:$android_ktx_version"
-
     //Styleable toast
     implementation "com.muddzdev:styleabletoast:$styleable_toast_version"
 
-    //Picasso
-    implementation 'com.squareup.picasso:picasso:2.71828'
-
-    //glide
-    implementation 'com.github.bumptech.glide:glide:4.5.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.5.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+    //Loading
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
 }
