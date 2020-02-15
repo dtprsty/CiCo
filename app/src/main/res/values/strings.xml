@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">CiCo</string>
+    <string name="clock_in">Clock In</string>
+    <string name="clock_out">Clock Out</string>
+    <string name="cancel">Cancel</string>
+    <string name="clocking_in">Clocking in...</string>
+    <string name="clocking_out">Clocking out...</string>
+    <string name="barista">Barista</string>
+    <string name="kaizen_coffee">Kaizen Coffee Co.</string>
+    <string name="yhai_thong_oon">Yhai Thong-oon</string>
+    <string name="location_manager">Location Manager</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="number">+66-955-5695-65</string>
 </resources>
