@@ -93,5 +93,17 @@
 
     </style>
 
+    <style name="error_toast">
+        <item name="stTextBold">true</item>
+        <item name="stTextColor">#fff</item>
+        <item name="stTextSize">14sp</item>
+        <item name="stColorBackground">@android:color/holo_red_dark</item>
+        <item name="stSolidBackground">true</item>
+        <item name="stStrokeWidth">3dp</item>
+        <item name="stIconStart">@drawable/ic_error_black_24dp</item>
+        <item name="stLength">LONG</item>
+        LONG or SHORT
+    </style>
+
 
 </resources>
